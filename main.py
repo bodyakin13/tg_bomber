@@ -8,14 +8,13 @@ import random
 from threading import Thread
 from random import choice
 
-TOKEN = '1118868523:AAFd3B-6yL5TpuAYywQ3ro51R0maHWxZhQM'
+TOKEN = '' #BOT_TOKEN 
 
 THREADS_LIMIT = 200
 
 chat_ids_file = 'chat_ids.txt'
 
-ADMIN_CHAT_ID = 721112766
-
+ADMIN_CHAT_ID = #YOUR_ID
 users_amount = [0]
 threads = list()
 THREADS_AMOUNT = [0]
@@ -24,7 +23,6 @@ bot = TeleBot(TOKEN)
 running_spams_per_chat_id = []
 
 def save_chat_id(chat_id):
-	"Функция добавляет чат айди в файл если его там нету"
 	chat_id = str(chat_id)
 	with open(chat_ids_file,"a+") as ids_file:
 		ids_file.seek(0)
